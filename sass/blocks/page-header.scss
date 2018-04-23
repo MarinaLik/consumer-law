@@ -1,0 +1,71 @@
+.page-header {
+  @include wrap-cent;
+  width: 95%;
+  text-align: center;
+  background-color: transparent;
+}
+
+.header__call {
+  @include wrap-cent;
+  position: relative;
+  text-align: center;
+}
+
+.header__num {
+  @include font-tit(20px, 1.2);
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.header__btn {
+  @include wrap-cent;
+  width: 200px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+////
+@media (min-width: $width-tab) {
+  .page-header {
+  @include wrap-flex;
+  height: 140px;
+  text-align: left;
+  margin-bottom: 30px;
+  }
+
+  .header__call {
+    margin: 0;
+  }
+
+  .header__num {
+    @include font-tit(22px, 1.2);
+  }
+
+  .header__btn {
+    width: 100%;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .header__num {
+    @include font-tit(25px, 1.2);
+    margin-top: 0;
+  }
+
+  .header__btn {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+////
+@media (min-width: $width) {
+  .page-header {
+    width: $width;
+  }
+
+  .header__num {
+    @include font-tit(27px, 1.2);
+  }
+}

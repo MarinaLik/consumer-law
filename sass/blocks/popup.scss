@@ -1,0 +1,153 @@
+.popup {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  width: 320px;
+  height: 290px;
+  box-shadow: 0 3px 99px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  background-color: $white;
+}
+
+.popup--header {
+  top: 35px;
+  right: -5px;
+}
+
+.popup--center {
+  height: 310px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  // padding: 10px;
+  box-shadow: 0 20px 110px 25px rgba(7, 39, 51, 0.14);
+}
+
+.popup--footer {
+  bottom: 0;
+  right: -75px;
+}
+
+// .popup--show {
+//   display: block;
+// }
+
+.popup-form {
+  width: 280px;
+  padding: 20px;
+}
+
+.popup-form__caption {
+  @include font-bold(14px, 1.2);
+  color: $black;
+  margin-top: 10px;
+}
+
+.popup-form__input {
+  @include font-primary(16px, 2.1);
+  color: $color-primary;
+  width: 240px;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 10px;
+  margin-bottom: 16px;
+  background-color: transparent;
+  border: $form-border;
+  border-radius: 5px;
+}
+
+.popup-form__input-user {
+  background-image: url("../img/user.png");
+  background-repeat: no-repeat;
+  background-position: 5px 8px;
+}
+
+.popup-form__input-phone {
+  background-image: url("../img/call-form.png");
+  background-repeat: no-repeat;
+  background-position: 5px 10px;
+}
+
+.popup-form__text {
+  @include font-primary(12px, 1.2);
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.popup-form__btn {
+  width: 100%;
+}
+
+.popup__close {
+  position: absolute;
+  z-index: 5;
+  top: 5px;
+  right: 5px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 15px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__close:hover {
+  &::before,
+  &::after {
+    background-color: $color-btn;
+  }
+}
+
+.popup__close:focus {
+  &::before,
+  &::after {
+    background-color: $color-btn;
+  }
+}
+
+.popup__close:active {
+  opacity: 0.5;
+}
+
+////
+@media (min-width: $width-tab) {
+  .popup--header {
+    top: 35px;
+    right: 0;
+  }
+
+  .popup--footer {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+////
+@media (min-width: $width) {
+  .popup--center {
+    top: -40px;
+    left: 0;
+    transform: none;
+    padding: 10px;
+  }
+}

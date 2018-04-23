@@ -1,0 +1,102 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: $white;
+  box-shadow: 0 3px 99px 2px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+}
+
+.modal-confed {
+  width: 92%;
+  height: 330px;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+// .modal--show {
+//   display: block;
+// }
+
+.modal__close {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 8px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 15px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__close:hover {
+  &::before,
+  &::after {
+    background-color: #0ea3da;
+  }
+}
+
+.modal__close:focus {
+  &::before,
+  &::after {
+    background-color: #0ea3da;
+  }
+}
+
+.modal__close:active {
+  opacity: 0.5;
+}
+
+////
+@media (min-width: $width-tab) {
+  .modal {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  .modal-confed {
+    width: 90%;
+    height: 400px;
+    padding: 20px;
+  }
+
+  .modal__close {
+    left: 10px;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .modal-confed {
+    width: 660px;
+    height: 460px;
+  }
+}
+
+.show {
+  display: block;
+}

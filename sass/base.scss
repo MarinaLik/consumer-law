@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato-md";
+  src: url("../fonts/Lato-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato-bold";
+  src: url("../fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Cyrl 700";
+  src: url("../fonts/Museo Cyrl 700.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Cyrl 900";
+  src: url("../fonts/Museo Cyrl 900.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include indent(0 auto, 0);
+  min-width: $width-mobil;
+  position: relative;
+  word-wrap: break-word;
+  font-family: $font-primary;
+  color: $black;
+  background-color: $white;
+  background-image: url("../img/fon-mob.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.page-main {
+  width: 100%;
+  background-color: transparent;
+}
+
+////
+
+@media (min-width: $width-tab) {
+  body {
+    background-image: url("../img/fon-tab.png");
+  }
+
+  .page-main {
+    width: 100%;
+  }
+}
+
+////
+
+@media (min-width: $width) {
+  body {
+    max-width: 1920px;
+    background-image: url("../img/fon.png");
+  }
+
+  .page-main {
+    @include wrap-cent;
+  }
+}
+
+///
+
+.check-agree {
+  display: none;
+}
+
+.label-agree {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 2px;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 7px;
+    height: 5px;
+    border-left: 2px solid $color-btn;
+    border-bottom: 2px solid $color-btn;
+    transform: rotate(-45deg);
+    background-color: transparent;
+    display: none;
+  }
+}
+
+.check-agree:checked + .label-agree::after {
+  display: block;
+}
+
+.link-confed {
+  color: $black;
+}
+
+.link-confed:hover,
+.link-confed:focus {
+  color: $chat-hed-bg;
+}
+
+.link-confed:active {
+  opacity: 0.5;
+}
+
+.overlay,
+.overlay-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($white, 0.9);
+  z-index: 6;
+}
+
+.overlay-feedback {
+  background-color: rgba(#cacaca, 0.9);
+}
+
+// .overlay--show {
+//   display: block;
+// }

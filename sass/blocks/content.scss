@@ -1,0 +1,360 @@
+.content__wrap {
+  @include wrap-cent;
+  // @include wrap-flex(center, flex-start);
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.content__img {
+  display: none;
+}
+
+.content__inner {
+  // margin-left: 65px;
+  text-align: center;
+  background-color: #f3fafd;
+}
+
+.content__title {
+  @include font-tit(35px, 1.2);
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.content__line {
+  @include wrap-cent;
+  display: inline-block;
+  width: 103px;
+  height: 5px;
+  background-color: $color-btn;
+}
+
+.content__subtitle {
+  @include font-bold(18px, 1.2);
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.content__text {
+  @include font-md(16px, 1.2);
+  text-align: left;
+  padding-left: 15px;
+}
+
+.content__wr {
+  // @include wrap-flex(flex-start, flex-start);
+  position: relative;
+  margin-top: 40px;
+}
+
+.content__btn {
+  @include wrap-cent;
+  width: 280px;
+  // margin-right: 35px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.content__autograph {
+  display: none;
+}
+
+.content__author {
+  display: none;
+}
+
+//Form
+.content-form {
+  @include wrap-cent;
+  width: 90%;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+  border: 10px solid #f3fafd;
+}
+
+.content-form__title {
+  @include font-tit(30px, 1.2);
+  color: $black;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.content-form__line {
+  display: inline-block;
+  width: 105px;
+  height: 2px;
+  background-color: $color-btn;
+}
+
+.content-form__text {
+  @include font-primary(16px, 1.4);
+  color: $black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.content-form__group {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-form__input {
+  @include font-primary(16px, 1.2);
+  color: $black;
+  width: 80%;
+  margin-bottom: 16px;
+  padding: 11px 20px;
+  border-radius: 3px;
+  border: $form-border;
+}
+
+.content-form__btn {
+  @include wrap-cent;
+  width: 270px;
+}
+
+.content-form__inner {
+  @include wrap-cent;
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.content-form__label {
+  @include font-primary(12px, 1.2);
+  color: $black;
+  padding-left: 40px;
+}
+
+////
+@media (min-width: $width-tab) {
+  .content__wrap {
+    background-image: url("../img/cub.png");
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-position-x: calc(50% - 300px);
+  }
+
+  .content__inner {
+    @include wrap-cent;
+    width: 480px;
+    background-color: transparent;
+  }
+
+  .content__title {
+    @include wrap-cent;
+    padding-bottom: 25px;
+    width: 350px;
+    padding-left: 55px;
+    background-image: url("../img/man-mob.png");
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+  }
+
+  .content-form__input {
+    width: 450px;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .content {
+    background-image: url("../img/cub.png");
+    background-repeat: no-repeat;
+    background-position-y: -20px;
+    background-position-x: calc(50% - 300px);
+  }
+
+  .content__wrap {
+    @include wrap-flex(center, flex-start);
+    margin-bottom: 20px;
+    background-image: none;
+  }
+
+  .content__img {
+    display: block;
+    width: 400px;
+    height: auto;
+  }
+
+  .content__title {
+    padding-left: 10px;
+    padding-top: 20px;
+    text-align: left;
+    background-image: none;
+  }
+
+  .content-form__title {
+    @include font-tit(45px, 1.2);
+  }
+
+  .content-form__text {
+    width: 700px;
+  }
+
+  .content-form__group {
+    @include wrap-cent;
+    @include wrap-flex;
+    width: 720px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .content-form__input {
+    width: 190px;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .content-form__btn {
+    width: 190px;
+    margin: 0;
+  }
+}
+
+////
+@media (min-width: $width) {
+  .content {
+    background-image: url("../img/cub.png");
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-position-x: calc(50% - 375px);
+  }
+
+  .content__wrap {
+    @include wrap-cent;
+    @include wrap-flex(center, flex-start);
+    width: $width;
+    padding-bottom: 40px;
+    // min-height: 604px;
+  }
+
+  .content__img {
+    width: 493px;
+    height: 736px;
+    margin-top: -119px;
+  }
+
+  .content__inner {
+    margin-left: 65px;
+  }
+
+  .content__title {
+    @include font-tit(50px, 1.2);
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .content__line {
+    display: inline-block;
+    width: 103px;
+    height: 5px;
+    background-color: $color-btn;
+  }
+
+  .content__subtitle {
+    @include font-bold(24px, 1.2);
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .content__text {
+    @include font-md(20px, 1.2);
+  }
+
+  .content__wr {
+    @include wrap-flex(flex-start, flex-start);
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .content__btn {
+    width: 280px;
+    margin-right: 35px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .content__autograph {
+    display: inline-block;
+    vertical-align: middle;
+    // padding-left: 20px;
+  }
+
+  .content__author {
+    display: inline-block;
+    @include font-primary(12px, 1.5);
+    color: $black;
+    padding-left: 20px;
+  }
+
+  //Form
+  .content-form {
+    @include wrap-cent;
+    width: 1000px;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 65px;
+    border: 20px solid #f3fafd;
+  }
+
+  .content-form__title {
+    @include font-tit(50px, 1.2);
+    color: $black;
+    margin-top: 36px;
+    margin-bottom: 20px;
+  }
+
+  .content-form__line {
+    display: inline-block;
+    width: 105px;
+    height: 2px;
+    background-color: $color-btn;
+  }
+
+  .content-form__text {
+    @include font-primary(18px, 30px);
+    color: $black;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+
+  .content-form__group {
+    @include wrap-flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .content-form__input {
+    @include font-primary(16px, 1.2);
+    color: $black;
+    width: 180px;
+    margin-right: 30px;
+    padding: 11px 20px;
+    border-radius: 3px;
+    border: $form-border;
+  }
+
+  .content-form__btn {
+    width: 196px;
+  }
+
+  .content-form__inner {
+    @include wrap-cent;
+    width: 680px;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .content-form__label {
+    @include font-primary(12px, 1.2);
+    color: $black;
+    padding-left: 40px;
+  }
+}

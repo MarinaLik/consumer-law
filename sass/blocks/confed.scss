@@ -1,0 +1,73 @@
+.confed {
+  @include wrap-cent;
+  width: 90%;
+  height: 310px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.confed__title {
+  @include font-tit(16px, 1.2);
+  color: $color-primary;
+  text-align: center;
+}
+
+.confed__subtitle {
+  @include font-bold(13px, 1.2);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.confed__text {
+  @include font-primary(11px, 1.2);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-indent: 10px;
+}
+
+////
+
+@media (min-width: $width-tab) {
+  .confed {
+    width: 90%;
+    height: 390px;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .confed {
+    width: 620px;
+    height: 420px;
+    padding: 20px;
+  }
+
+  .confed__title {
+    @include font-tit(17px, 1.2);
+  }
+
+  .confed__subtitle {
+    @include font-bold(15px, 1.2);
+  }
+
+  .confed__text {
+    @include font-primary(13px, 1.2);
+    text-indent: 20px;
+  }
+}
+
+////
+
+@media (min-width: $width) {
+    .confed__title {
+    @include font-tit(20px, 1.2);
+  }
+
+  .confed__subtitle {
+    @include font-bold(16px, 1.2);
+  }
+
+  .confed__text {
+    @include font-primary(14px, 1.2);
+  }
+}

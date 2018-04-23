@@ -1,0 +1,191 @@
+.feedback {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 304px;
+  height: 330px;
+  padding: 8px;
+  padding-top: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: $white;
+  box-shadow: 0 12px 101px 19px rgba(7, 39, 51, 0.14);
+  border-radius: 5px;
+  display: none;
+}
+
+.feedback__form {
+  padding: 10px;
+}
+
+.feedback__caption {
+  @include font-tit(15px, 1.2);
+   margin-top: 0;
+  text-indent: 10px;
+}
+
+.feedback__label {
+  @include font-primary(14px, 1.4);
+  color: $black;
+  display: inline-block;
+  width: 120px;
+  margin-right: 10px;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+.feedback__input {
+  @include font-primary(16px, 2.1);
+  color: $black;
+  width: 240px;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: $form-border;
+  border-radius: 3px;
+}
+
+.feedback__message {
+  @include font-primary(15px, 1.3);
+  color: $black;
+  width: 240px;
+  height: 90px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: $form-border;
+  background-color: $white;
+  resize: none;
+  outline: none;
+}
+
+.feedback__desc {
+  @include font-primary(12px, 1.2);
+  padding-left: 10px;
+}
+
+.feedback__label-check {
+  @include font-primary(12px, 1.2);
+  margin-bottom: 10px;
+}
+
+.feedback__btn {
+  @include wrap-cent;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.feedback__close {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  right: 8px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 15px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.feedback__close:hover {
+  &::before,
+  &::after {
+    background-color: $color-btn;
+  }
+}
+
+.feedback__close:focus {
+  &::before,
+  &::after {
+    background-color: $color-btn;
+  }
+}
+
+.feedback__close:active {
+  opacity: 0.5;
+}
+
+////
+@media (min-width: $width-tab) {
+  .feedback {
+    width: 480px;
+    height: 400px;
+    padding: 20px;
+  }
+
+  .feedback__form {
+    padding: 20px;
+  }
+
+  .feedback__caption {
+    @include font-tit(18px, 1.2);
+    text-indent: 20px;
+  }
+
+  .feedback__label {
+    @include font-primary(16px, 1.4);
+    margin-bottom: 0;
+  }
+
+  .feedback__input {
+    width: 260px;
+    margin-bottom: 16px;
+  }
+
+  .feedback__message {
+    @include font-primary(16px, 1.3);
+    width: 260px;
+    height: 110px;
+  }
+
+  .feedback__btn {
+    margin-bottom: 15px;
+  }
+
+  .feedback__label-check {
+    @include font-primary(14px, 1.2);
+  }
+
+  .feedback__close {
+    right: 10px;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .feedback {
+    height: 500px;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .feedback__label-check {
+    margin-bottom: 15px;
+  }
+}
+

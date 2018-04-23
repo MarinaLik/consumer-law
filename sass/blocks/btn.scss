@@ -1,0 +1,35 @@
+.btn {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  font-family: $font-primary;
+  font-weight: 700;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn--brd {
+  background-color: transparent;
+  border: $border;
+}
+
+.btn--bg {
+  background-color: $color-btn;
+  color: $white;
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: $color-btn-hover;
+  color: $white;
+}
+
+.btn:active {
+  background-color: $color-btn;
+  color: $white;
+  opacity: 0.5;
+}

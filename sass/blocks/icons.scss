@@ -1,0 +1,84 @@
+.icon-tv {
+  width: 55px;
+  height: auto;
+  padding-top: 45px;
+}
+
+.icon-house {
+  width: 54px;
+  height: auto;
+  padding-top: 53px;
+}
+
+.icon-sofa {
+  width: 63px;
+  height: auto;
+  padding-top: 52px;
+}
+
+.icon-parfum {
+  width: 47px;
+  height: auto;
+  padding-top: 55px;
+}
+
+.icon-car {
+  width: 71px;
+  height: auto;
+  padding-top: 48px;
+}
+
+.icon-dialog {
+  width: 49px;
+  height: auto;
+  padding-top: 46px;
+}
+
+////
+@media (min-width: $width-tab) {
+  
+}
+
+///
+@media (min-width: 800px) {
+  
+}
+
+////
+@media (min-width: $width) {
+  .icon-tv {
+    width: 111px;
+    height: 111px;
+    padding-top: 40px;
+  }
+
+  .icon-house {
+    width: 109px;
+    height: 101px;
+    padding-top: 50px;
+  }
+
+  .icon-sofa {
+    width: 126px;
+    height: 83px;
+    padding-top: 67px;
+  }
+
+  .icon-parfum {
+    width: 95px;
+    height: 103px;
+    padding-top: 50px;
+  }
+
+  .icon-car {
+    width: 143px;
+    height: 67px;
+    padding-top: 70px;
+  }
+
+  .icon-dialog {
+    width: 98px;
+    height: 88px;
+    padding-top: 50px;
+  }
+}

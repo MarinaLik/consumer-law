@@ -1,0 +1,97 @@
+.contacts {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #ebebeb;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 500px;
+}
+
+.contacts__card {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 250px;
+  height: 160px;
+  background-color: $white;
+}
+
+.contacts__caption {
+  font-size: 0;
+}
+
+.contacts__label {
+  @include font-primary(12px, 1.2);
+  color: $black;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+
+.contacts__text {
+  @include font-primary(14px, 1.2);
+  color: $black;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 10px;
+}
+
+////
+@media (min-width: $width-tab) {
+  .contacts {
+    @include wrap-cent;
+    width: 92%;
+  }
+
+  .contacts__card {
+    bottom: 5px;
+    left: 1px;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .contacts__card {
+    left: 5px;
+  }
+}
+
+////
+@media (min-width: $width) {
+  .contacts {
+    width: $width;
+    height: 600px;
+  }
+
+  .contacts__map {
+    width: $width;
+    height: 600px;
+  }
+
+  .contacts__card {
+    top: 100px;
+    left: 100px; 
+    width: 290px;
+    height: 240px;
+    padding: 30px;
+    padding-right: 20px;
+  }
+
+  .contacts__caption {
+    @include font-tit(38px, 1.2);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .contacts__label {
+    @include font-primary(14px, 1.5);
+    padding: 0;
+  }
+
+  .contacts__text {
+    @include font-primary(18px, 1.2);
+    padding: 0;
+  }
+}

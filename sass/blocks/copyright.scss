@@ -1,0 +1,47 @@
+.copyright {
+  width: 185px;
+  padding-bottom: 10px;
+}
+
+.copyright__link {
+  text-decoration: none;
+}
+
+.copyright__text {
+  @include font-primary(14px, 1.2);
+  color: #051945;
+  display: inline-block;
+  vertical-align: top;
+  width: 110px;
+  padding-left: 14px;
+}
+
+////
+
+@media (min-width: $width-tab) {
+  .copyright {
+    align-self: flex-end;
+    width: 250px;
+    padding-left: 40px;
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .copyright {
+    align-self: flex-end;
+    width: 45%;
+    padding-left: 60px;
+  }
+}
+
+////
+
+@media (min-width: $width) {
+  .copyright {
+    order: 1;
+    align-self: center;
+    width: 185px;
+    padding-left: 0;
+  }
+}

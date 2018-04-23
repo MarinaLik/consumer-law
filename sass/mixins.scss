@@ -1,0 +1,61 @@
+@mixin font-primary($size, $line-height) {
+  font-family: $font-primary;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 400;
+}
+
+@mixin font-md($size, $line-height) {
+  font-family: $font-md;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 500;
+}
+
+@mixin font-bold($size, $line-height) {
+  font-family: $font-primary;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 700;
+}
+
+@mixin font-tit($size, $line-height) {
+  font-family: $font-title;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 400;
+}
+
+@mixin font-titxl($size, $line-height) {
+  font-family: $font-title-bold;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: 400;
+}
+
+@mixin wrap-cent() {
+  margin: 0 auto;
+}
+
+@mixin indent($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin wrap-flex($justify: space-between, $items: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $items;
+}
+
+@mixin transition($property, $time, $transition) {
+  transition-property: $property;
+  transition-duration: $time;
+  transition-timing-function: $transition;
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

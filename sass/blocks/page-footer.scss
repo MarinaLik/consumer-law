@@ -1,0 +1,159 @@
+.page-footer {
+  @include wrap-flex(flex-start, center);
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: transparent;
+}
+
+.footer__inner {
+  width: 200px;
+  margin-left: 20px;
+}
+
+.footer__law {
+  @include font-primary(12px, 14px);
+  color: #051945;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.footer__info {
+  width: 270px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.footer__caption {
+  @include font-tit(12px, 1.4);
+  margin-bottom: 0;
+}
+
+.footer__text {
+  @include font-primary(10px, 1.2);
+  margin-top: 10px;
+  color: $color-primary;
+}
+
+.footer__link {
+  @include font-primary(11px, 1.2);
+}
+
+.footer__call {
+  position: relative;
+}
+
+.footer__num {
+  @include font-tit(16px, 1.2);
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.footer__btn {
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+////
+
+@media (min-width: $width-tab) {
+  .page-footer {
+    @include wrap-flex(space-around, center);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer__law {
+    margin-bottom: 5px;
+  }
+
+  .footer__info {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .footer__caption {
+    @include font-tit(14px, 1.4);
+  }
+
+  .footer__text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .footer__num {
+    @include font-tit(18px, 1.2);
+  }
+}
+
+///
+@media (min-width: 800px) {
+  .footer__inner {
+    margin-right: auto;
+    padding-left: 20px;
+  }
+
+  .footer__law {
+    @include font-primary(13px, 15px);
+    margin-top: 10px;
+  }
+
+  .footer__info {
+    text-align: left;
+    width: 260px;
+    padding-left: 30px;
+  }
+
+  .footer__caption {
+    @include font-tit(16px, 1.4);
+  }
+
+  .footer__text {
+    @include font-primary(12px, 1.2);
+    margin-top: 10px;
+  }
+
+  .footer__link {
+    @include font-primary(12px, 1.2);
+  }
+}
+
+////
+@media (min-width: $width) {
+  .page-footer {
+    @include wrap-cent;
+    @include wrap-flex;
+    width: $width;
+    height: 170px;
+  }
+
+  .footer__inner {
+    padding-left: 0;
+  }
+
+  .footer__info {
+    order: 0;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .footer__caption {
+    @include font-tit(18px, 1.2);
+  }
+
+  .footer__text {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer__link {
+    @include font-primary(14px, 1.2);
+  }
+
+  .footer__call {
+    order: 1;
+  }
+}
